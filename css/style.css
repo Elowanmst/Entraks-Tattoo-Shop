@@ -1,0 +1,581 @@
+/* Styles Généraux */
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Lugrasimo&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+p{
+    font-family: 'reddit mono', monospace;
+}
+h3{
+    font-family: 'reddit mono', monospace;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+h2 {
+    font-size: 40px;
+    margin: 20px;
+    text-align: center;
+    font-family: 'almendra', serif;
+}
+h4 {
+    font-size: 40px;
+    margin: 20px;
+    text-align: center;
+    font-family: 'almendra', serif;
+}
+
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    height: 10vh;
+}
+.nav_retract {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+.nav_right {
+    display: flex;
+    padding: 10px;
+    margin: 25px;
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-family: 'almendra', serif;
+}
+.element_nav {
+    margin: 0 20px 0 0;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+    z-index: 0;
+}
+
+.element-nav_hidden {
+    display: none;
+    transform: translateX(100%);
+}
+.element_nav a {
+    margin: 0 10px;
+    font-size: 17px;
+}
+.element_nav a:hover {
+    color: #ee5b73;
+}
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+.menu-icon .bar {
+    width: 100%;
+    height: 2.2px;
+    background-color: white;
+}
+.menu-icon:hover .bar {
+    background-color: #ee5b73;
+}
+.nom_logo {
+    margin : 30px 70px;
+    color: white;
+    font-size: 40px;
+    font-family: 'almendra', serif;
+    
+}
+.nom_logo :hover {
+    font-size: 50px;
+    color:#ffffff;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    background-image: url(../img/entraks.jpg);
+    background-size: 40%; /* Réduire la taille de l'image à 50% */
+    background-position: center; /* Centrer l'image */
+    background-repeat : no-repeat;
+    height: 95vh;
+}
+header h1 {
+    font-size: 100px;
+    text-shadow: 3px 5px 2px #474747;
+    cursor: default;
+    color: white;
+}
+header h1:hover {
+    font-size: 110px;
+    color:#ffffff;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Artistes */
+#artistes {
+    margin: 20px;
+    text-align: center;
+    
+    border: none;
+    color: black;
+    display: grid;
+    place-items: center; /* Centrer les éléments dans le conteneur */
+}
+#artistes p {
+    margin: 10px;
+    
+}
+
+#artistes .art-title {
+    font-size: 2em; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    text-align: center; /* Centrer le texte */
+    color: white; /* Couleur du texte */
+    margin-bottom: 10px; /* Espacement en dessous du titre */
+}
+
+#artistes .art_ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: auto;
+}
+
+#artistes .art_li {
+    flex: 1 0 5%; /* La largeur de l'élément est de 21%, mais il se réduit si nécessaire */
+    margin: 1.5%;
+    background-color: #f8f8f8;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    /*flex-grow: 0; 
+    flex-shrink: 0;
+    flex-basis: 350px; 
+    margin: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+    list-style: none;*/
+}
+#artistes .art_li div {
+    position: absolute;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.8);
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,.8));
+}
+
+
+#artistes .art{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+img {
+    display: block;
+    margin: auto;
+    /* autres styles */
+}
+
+#artistes .art_li img {
+    width:100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    transition: transform .5s ease;
+    /*width: 100%; 
+    height: auto; 
+    object-fit: cover; */
+}
+#artistes .art_li:hover img {
+    transform: scale(1.1);
+    justify-content: center;
+}
+
+#artistes .art_li .art-content p {
+    font-size: 1rem; /* Contrôler la taille du texte */
+    color: white; /* Contrôler la couleur du texte */
+    line-height: 1.5; /* Contrôler l'espacement entre les lignes de texte */
+    margin: 0.5rem 0; /* Ajouter de l'espace au-dessus et en dessous du texte */
+    text-align: center; /* Centrer le texte horizontalement */
+    margin-left: auto; /* Centrer le bloc de texte horizontalement */
+    margin-right: auto;
+    font-weight: 600;    
+}
+#artistes .art_li::before {
+    content: '';
+    display: flex;
+    justify-content: center;
+    padding-top: 100%; /* maintient le ratio d'aspect 1:1 */
+}
+#artistes .art_li div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.8);
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,.8));
+}
+#guest .art_li {
+    flex: 1 0 21%; /* Ajuster la largeur des boîtes */
+    margin: 1.5%; /* Ajuster la marge autour des boîtes */
+}
+
+
+
+
+#guest {
+    margin-top: 0px;
+    margin-bottom: 150px;
+    text-align: center;
+    
+    border: none;
+    color: black;
+    display: grid;
+    place-items: center; /* Centrer les éléments dans le conteneur */
+}
+#guest p {
+    margin: 10px;
+    
+}
+
+#guest .art-title {
+    font-size: 2em; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    text-align: center; /* Centrer le texte */
+    color: white; /* Couleur du texte */
+    margin-bottom: 10px; /* Espacement en dessous du titre */
+}
+
+#guest .art_ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+    height: 450px;
+}
+
+#guest .art_li {
+    flex: 1 0 5%; /* La largeur de l'élément est de 21%, mais il se réduit si nécessaire */
+    margin: 1.5%;
+    background-color: #f8f8f8;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    /*flex-grow: 0; 
+    flex-shrink: 0;
+    flex-basis: 350px; 
+    margin: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+    list-style: none;*/
+}
+#guest .art_li div {
+    position: absolute;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.8);
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,.8));
+}
+
+
+#guest .art{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+#guest .art_li img {
+    width:100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    transition: transform .5s ease;
+    /*width: 100%; 
+    height: auto; 
+    object-fit: cover; */
+}
+#guest .art_li:hover img {
+    transform: scale(1.1);
+    justify-content: center;
+}
+
+#guest .art_li .art-content p {
+    font-size: 1rem; /* Contrôler la taille du texte */
+    color: white; /* Contrôler la couleur du texte */
+    line-height: 1.5; /* Contrôler l'espacement entre les lignes de texte */
+    margin: 0.5rem 0; /* Ajouter de l'espace au-dessus et en dessous du texte */
+    text-align: center; /* Centrer le texte horizontalement */
+    margin-left: auto; /* Centrer le bloc de texte horizontalement */
+    margin-right: auto;
+    font-weight: 600;    
+}
+#guest .art_li::before {
+    content: '';
+    display: flex;
+    justify-content: center;
+    padding-top: 100%; /* maintient le ratio d'aspect 1:1 */
+}
+#guest .art_li div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.8);
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,.8));
+    
+}
+
+
+
+
+/* Projets */
+#projets {
+    padding: 20px 50px;
+    z-index: 1;
+    background-color: black;
+}
+#projets h2 {
+    color: white;
+    font-family: 'almendra', serif;
+    text-align: center;
+}
+#projets .container {
+    display: flex;
+    justify-content: space-between;
+}
+.projet {
+    flex: 0.33;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 3px solid black;
+    border-radius: 25px;
+    background-color: white;
+    cursor: pointer; /* Modifier le curseur au survol */
+    overflow: hidden; /* Cacher le contenu débordant */
+    transition: transform 0.3s ease;
+}
+.projet img {
+    width: 100%;
+    height: auto;
+    border: 2px solid rgb(0, 0, 0);
+}
+.projet img,
+.projet h3,
+.projet p {
+    transition: transform 0.3s ease; /* Ajouter la même transition pour les éléments internes */
+}
+
+/* Animation au survol */
+.projet:hover {
+    transform: scale(1.05); /* Agrandir légèrement l'élément au survol */
+}
+
+/* Animation des éléments internes au survol */
+.projet:hover img,
+.projet:hover h3,
+.projet:hover p {
+    transform: translateY(-10px); /* Déplacer les éléments vers le haut au survol */
+}
+
+#contact ul {
+    list-style-type: none;
+}
+#contact li {
+    margin: 10px;
+}
+/* Contact */
+#contact {
+    padding: 20px 50px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'reddit mono', monospace;
+}
+
+/* Répartition des champs */
+.field-divided {
+    width: 49%;
+}
+
+.field-select {
+    width: 100%;
+}
+
+.field-textarea {
+    resize: vertical; /* Permet le redimensionnement vertical uniquement */
+}
+
+.animated-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.animated-button:hover {
+    background-color: #0056b3;
+}
+
+/* Animation supplémentaire pour le texte au survol */
+.animated-button:hover::after {
+    content: ' :)';
+    margin-left: 5px;
+    transition: margin-left 0.3s ease;
+}
+
+.insta img {
+    width: 70px; /* Réduire la largeur de l'image à 50% */
+    height: auto; /* Garder le ratio d'aspect de l'image */
+}
+
+
+
+/*format tel*/
+
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 2em;
+    }
+    .nav_right {
+        display: none;
+    }
+    .element_nav {
+        padding: 10px 0px;
+    }
+    .element_nav a {
+        font-size: 0.5em;
+        margin: 0 5px;
+    }
+    .nom_logo {
+        font-size: 17px;
+    }
+    .nom_logo {
+        margin : 30px 30px;
+        font-size: 12px;
+    }
+
+    header {
+        height: 90vh;
+        background-size: 80%; 
+    }
+    header h1 {
+        font-size: 5em;
+        font-variation-settings: "wght" 600, "ital" 1;
+        text-shadow: 4px 4px 0px #07bccc,
+            10px 10px 0px #e601c0,
+            15px 15px 0px #e9019a,
+            20px 20px 0px #f40468,
+            40px 40px 10px rgb(15, 15, 15);
+    }
+
+    
+   
+    #artistes .art_ul{
+        width: 380px;
+        height: 280px;
+        font-size: 0.5em;  
+        padding-top: 0px;     
+    }
+    #artistes .art_li {
+        flex: 1 0 21%;
+        margin: 1.5%;
+    }
+    .art-content p {
+        display: none;
+    }
+
+    #guest .art_ul{
+        width: 200px;
+        height: 100px;
+        font-size: 0.5em;
+    }
+
+
+
+   
+    #a_propos p {
+        margin: 10px 0px;
+        font-size: 1em;
+    }
+
+    
+    #competences {
+        padding: 25px 10px;
+    }
+    #competences .container {
+        flex-direction: column;
+    }
+
+   
+    #projets {
+        padding: 20px 10px;
+    }
+    #projets .container {
+        flex-direction: column;
+    }
+
+   
+    #contact {
+        font-size: 1em;
+    }
+}
+
