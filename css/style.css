@@ -94,7 +94,7 @@ nav {
     color: white;
     font-size: 40px;
     font-family: 'almendra', serif;
-    
+    z-index: 900;
 }
 .nom_logo :hover {
     font-size: 50px;
