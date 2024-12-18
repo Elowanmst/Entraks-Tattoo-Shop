@@ -148,6 +148,43 @@
             </div>
         </section>
 
+        <form id="tattooForm" action="send_email.php" method="post">
+            <ul>
+                <li>
+                    <label for="nom">Nom:</label>
+                    <input type="text" id="nom" name="nom" required />
+                </li>
+                <li>
+                    <label for="prenom">Prénom:</label>
+                    <input type="text" id="prenom" name="prenom" required />
+                </li>
+                <li>
+                    <label for="mail">E-mail:</label>
+                    <input type="email" id="mail" name="mail" required />
+                </li>
+                <li>
+                    <label for="tel">Téléphone:</label>
+                    <input type="tel" id="tel" name="tel" placeholder="+33 6 12 34 56 78" required />
+                </li>
+                <li>
+                    <label for="msg">Idée du tattoo:</label>
+                    <textarea id="msg" name="message"></textarea>
+                </li>
+                <li>
+                    <label for="taille">Taille approximative du tattoo:</label>
+                    <textarea id="taille" name="taille" required></textarea>
+                </li>
+                <li>
+                    <label for="emplacement">Emplacement du tattoo:</label>
+                    <input type="text" id="emplacement" name="emplacement" />
+                </li>
+            </ul>
+            <div class="button">
+                <button type="submit">Envoyer la demande</button>
+            </div>
+        </form>   
+
+
         <section id="contact">
         <h2>Contactez nous ! 😁</h2>
             <ul>

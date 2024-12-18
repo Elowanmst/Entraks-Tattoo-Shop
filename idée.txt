@@ -1,0 +1,15 @@
+formulaire de devis
+
+nom, prenom, adresse mail, telephone
+idee du tatoo, emplacement, taille approximative 
+photo de l'emplacement 
+tatoueur voulue -> val ou manon
+
+
+
+
+
+
+
+adresse mail d'envoie -> entraks.tattoo.shop.rdv@gmail.com
+
