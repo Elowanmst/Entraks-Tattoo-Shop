@@ -156,6 +156,54 @@
                 <li>02 40 42 30 88</li>  
                 <a class=insta href="https://www.instagram.com/entraks.tattoo.shop" target="_blank"><img src="img/insta.png" alt="instagram"></a>
             </ul>
+
+            <form id="tattooForm" action="https://api.web3forms.com/submit" method="POST">
+
+                <!-- Replace with your Access Key -->
+                <input type="hidden" name="access_key" value="d5dc6d6a-e42b-49c5-9234-459a0681a2b8">
+                
+                <!-- Form Inputs. Each input must have a name="" attribute -->
+                <ul>
+                    <h4>Une idée ? Contactez-nous !</h4>
+                    <il>
+                        <!-- <label for="prenom">Prénom</label> -->
+                        <input type="text" name="Prenom" placeholder="Prenom"required>
+                    
+                        <!-- <label for="prenom">Nom</label> -->
+                        <input type="text" name="Nom" placeholder="Nom"required>
+                    </il>   
+                    <il>
+                        <!-- <label for="mail">E-mail</label> -->
+                        <input type="email" name="email" placeholder="Email"required>
+                    </il>  
+                    <il>  
+                        <!-- <label for="tel">Téléphone</label> -->
+                        <input type="tel" name="telephone" placeholder="Numéro de téléphone" required>
+                    </il>
+                    <il>    
+                        <!-- <label for="msg">Idée du tattoo</label> -->
+                        <textarea name="idée du tattoo" placeholder="Idée du tattoo"></textarea>
+                    </il> 
+                    <il>   
+                        <!-- <label for="taille">Taille approximative du tattoo</label> -->
+                        <input type="text" name="Taille approximative du tattoo" placeholder="Taille approximative du tattoo">
+                    </il>
+                    <il>    
+                        <!-- <label for="emplacement">Emplacement du tattoo</label> -->
+                        <input type="text" name="Emplacement du tattoo" placeholder="Emplacement du tattoo">
+                    </il>    
+                </ul>    
+                <!-- Honeypot Spam Protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            
+                <!-- Custom Confirmation / Success Page -->
+                <input type="hidden" name="redirect" value="https://entraks-tattoo-shop.vercel.app/"> 
+            
+                <button class=bout type="submit">Envoyer</button>
+            
+            </form>
+            
+
             <iframe class="carte" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.928200920005!2d-2.3440063858889073!3d47.268578278993665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805433a85699ccb%3A0xa0134148ee5bc775!2sEntrak&#39;s%20Tattoo%20shop!5e0!3m2!1sfr!2sfr!4v1716368451069!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
 
