@@ -517,6 +517,7 @@ img {
     padding: 0;
     align-items: center;
     margin-top: 5px;
+    margin-bottom: 50px;
 }
 
 #tattooForm li {
@@ -559,6 +560,8 @@ img {
     border-color: #e6e4e4; /* Change la bordure au focus */
     background-color: #ffffff; /* Fait ressortir le champ */
 }
+
+
 
 #tattooForm button.bout {
     background-color: #000000;

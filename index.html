@@ -161,28 +161,30 @@
 
                 <!-- Replace with your Access Key -->
                 <input type="hidden" name="access_key" value="d5dc6d6a-e42b-49c5-9234-459a0681a2b8">
+
+                <input type="hidden" name="subject" value="Demande de contact">
                 
                 <!-- Form Inputs. Each input must have a name="" attribute -->
                 <ul>
                     <h4>Une idée ? Contactez-nous !</h4>
                     <il>
                         <!-- <label for="prenom">Prénom</label> -->
-                        <input type="text" name="Prenom" placeholder="Prenom"required>
+                        <input type="text" name="Prenom" placeholder="Prenom*"required>
                     
                         <!-- <label for="prenom">Nom</label> -->
-                        <input type="text" name="Nom" placeholder="Nom"required>
+                        <input type="text" name="Nom" placeholder="Nom*"required>
                     </il>   
                     <il>
                         <!-- <label for="mail">E-mail</label> -->
-                        <input type="email" name="email" placeholder="Email"required>
+                        <input type="email" name="email" placeholder="Email*"required>
                     </il>  
                     <il>  
                         <!-- <label for="tel">Téléphone</label> -->
-                        <input type="tel" name="telephone" placeholder="Numéro de téléphone" required>
+                        <input type="tel" name="telephone" placeholder="Numéro de téléphone*" required>
                     </il>
                     <il>    
                         <!-- <label for="msg">Idée du tattoo</label> -->
-                        <textarea name="idée du tattoo" placeholder="Idée du tattoo"></textarea>
+                        <textarea name="idée du tattoo" placeholder="Idée du tattoo*" required></textarea>
                     </il> 
                     <il>   
                         <!-- <label for="taille">Taille approximative du tattoo</label> -->
@@ -192,17 +194,66 @@
                         <!-- <label for="emplacement">Emplacement du tattoo</label> -->
                         <input type="text" name="Emplacement du tattoo" placeholder="Emplacement du tattoo">
                     </il>    
+                    
                 </ul>    
+
+                <div class=h-captcha data-captcha=true></div>
+
                 <!-- Honeypot Spam Protection -->
                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             
                 <!-- Custom Confirmation / Success Page -->
                 <input type="hidden" name="redirect" value="https://entraks-tattoo-shop.vercel.app/"> 
+                 <!-- a voir avec val si ca lui conviens detre comme ca ou d'enlever le redirect a la page -->
+
+                 <!-- <script>
+                    const form = document.getElementById('tattooForm');
+                    
+                    form.addEventListener('submit', function(e) {
+                    
+                        const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+                    
+                        if (!hCaptcha) {
+                            e.preventDefault();
+                            alert("Veuillez remplir le captcha");
+                            return
+                        }
+                    });
+                    </script> -->
+
+
+
+                    <script>
+                        const form = document.getElementById('tattooForm');
+                        const submitButton = document.getElementById('bouti');
+                    
+                        form.addEventListener('submit', function(e) {
+                            const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+                    
+                            if (!hCaptcha) {
+                                e.preventDefault(); // Empêche l'envoi du formulaire
+                                alert("Veuillez remplir le captcha");
+                                return;
+                            }
+                    
+                            // Affiche une popup avant l'envoi
+                            const confirmation = confirm("Êtes-vous sûr de vouloir envoyer le formulaire ?");
+                            if (!confirmation) {
+                                e.preventDefault(); // Annule l'envoi si l'utilisateur choisit "Annuler"
+                            }
+                        });
+                    </script>
+
+
+
             
-                <button class=bout type="submit">Envoyer</button>
+                <button id="bouti" class=bout type="submit">Envoyer</button>
             
             </form>
-            
+
+           
+
+            <script src="https://web3forms.com/client/script.js" async defer></script>
 
             <iframe class="carte" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.928200920005!2d-2.3440063858889073!3d47.268578278993665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805433a85699ccb%3A0xa0134148ee5bc775!2sEntrak&#39;s%20Tattoo%20shop!5e0!3m2!1sfr!2sfr!4v1716368451069!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
@@ -214,7 +265,7 @@
     </main>
 
     <footer>
-        <p>© Entrak's Tattoo Shop | 2024</p>
+        <p>© Entrak's Tattoo Shop | 2025</p>
     </footer>
 </body>
 </html>
