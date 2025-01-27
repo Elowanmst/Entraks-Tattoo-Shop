@@ -5,8 +5,9 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Entrak's Tattoo Shop, salon de tatouage à Pornichet. Découvrez nos artistes et leurs projets.">
-    <meta name="keywords" content="tatouage, salon de tatouage, Tattoo, Pornichet, La Baule">
+    <meta name="description" content="Entrak's Tattoo Shop, salon de tatouage installer à Pornichet proche de Nantes et St Nazaire. Découvrez nos artistes et leurs projets.">
+    <meta name="keywords" content="tatouage, salon de tatouage, Tattoo, Pornichet, La Baule, Loire Atlantique, Bretagne, black work">
+    <meta name="author" content="Entrak's Tattoo Shop">
     <title>Entrak's Tatoo Shop, salon de tatouage à Pornichet</title>
     <link rel="stylesheet" href="../css/style.css">
     <script type="text/javascript" src="../js/script.js" defer></script>
@@ -16,7 +17,7 @@
 <body id="top">
     <nav>
         <div class="nom_logo">
-            <h4>Entrak's Tattoo Shop</h4>
+            <h1>Entrak's Tattoo Shop</h1>
         </div>
         <div class="nav_right">
             <div class="element_nav">
@@ -48,7 +49,7 @@
                     <div class="art">
                         
                         <a href="https://www.instagram.com/vlad.cortez" target="_blank">
-                            <img src="img/vlad.jpg">
+                            <img src="img/vlad.jpg" alt="logo du tatoueur vlad cortez, un V dans un C entourer d'un ornemental dark">
                         </a>
                         <div class="art-content">
                             <h2 class="art-title">Vlad Cortez</h2>
@@ -60,7 +61,7 @@
                     <div class="art">
                         
                         <a href="https://www.instagram.com/moohea_chan.ink" target="_blank">
-                            <img src="img/moohea.jpg">
+                            <img src="img/moohea.jpg" alt="logo de la tatoueuse Moohea chan, ornemental sur fond noir">
                         </a>
                         
                         <div class="art-content">
@@ -83,7 +84,7 @@
                     <div class="art">
                         
                         <a href="https://www.instagram.com/ambre_tattooer" target="_blank">
-                            <img src="img/ambre.jpg">
+                            <img src="img/ambre.jpg" alt="image de la tatoueuse ambre tatooer">
                         </a>
                         <div class="art-content">
                             <h2 class="art-title">Ambre Tattooer</h2>
@@ -166,7 +167,7 @@
                 
                 <!-- Form Inputs. Each input must have a name="" attribute -->
                 <ul>
-                    <h4>Une idée ? Contactez-nous !</h4>
+                    <h2>Une idée ? Contactez-nous !</h2>
                     <il>
                         <!-- <label for="prenom">Prénom</label> -->
                         <input type="text" name="Prenom" placeholder="Prenom*"required>
@@ -194,32 +195,17 @@
                         <!-- <label for="emplacement">Emplacement du tattoo</label> -->
                         <input type="text" name="Emplacement du tattoo" placeholder="Emplacement du tattoo">
                     </il>    
-                    
+                   
                 </ul>    
 
                 <div class=h-captcha data-captcha=true></div>
 
-                <!-- Honeypot Spam Protection -->
+               
                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             
-                <!-- Custom Confirmation / Success Page -->
+                
                 <input type="hidden" name="redirect" value="https://entraks-tattoo-shop.vercel.app/"> 
-                 <!-- a voir avec val si ca lui conviens detre comme ca ou d'enlever le redirect a la page -->
-
-                 <!-- <script>
-                    const form = document.getElementById('tattooForm');
-                    
-                    form.addEventListener('submit', function(e) {
-                    
-                        const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
-                    
-                        if (!hCaptcha) {
-                            e.preventDefault();
-                            alert("Veuillez remplir le captcha");
-                            return
-                        }
-                    });
-                    </script> -->
+               
 
 
 
@@ -231,15 +217,15 @@
                             const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
                     
                             if (!hCaptcha) {
-                                e.preventDefault(); // Empêche l'envoi du formulaire
+                                e.preventDefault(); 
                                 alert("Veuillez remplir le captcha");
                                 return;
                             }
                     
-                            // Affiche une popup avant l'envoi
+                         
                             const confirmation = confirm("Êtes-vous sûr de vouloir envoyer le formulaire ?");
                             if (!confirmation) {
-                                e.preventDefault(); // Annule l'envoi si l'utilisateur choisit "Annuler"
+                                e.preventDefault(); 
                             }
                         });
                     </script>
@@ -266,6 +252,66 @@
 
     <footer>
         <p>© Entrak's Tattoo Shop | 2025</p>
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "TattooParlor",
+              "name": "Entrak's Tattoo Shop",
+              "description": "Entrak's Tattoo Shop, salon de tatouage à Pornichet. Découvrez nos artistes et leurs projets.",
+              "image": "https://entraks-tattoo-shop.vercel.app/img/favicon.png",
+              "url": "https://entraks-tattoo-shop.vercel.app/",
+              "telephone": "+33240423088",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "35 avenue du général de Gaulle",
+                "addressLocality": "Pornichet",
+                "postalCode": "44380",
+                "addressCountry": "FR"
+              },
+              "sameAs": [
+                "https://www.instagram.com/entraks.tattoo.shop"
+              ],
+              "founder": {
+                "@type": "Person",
+                "name": "Vlade Cortez",
+                "jobTitle": "Tattoo Artist",
+                "description": "Black work - Floral - Esoteric - Ornemental - Dark",
+                "image": "https://entraks-tattoo-shop.vercel.app/img/vlad.jpg",
+                "url": "https://www.instagram.com/vlad.cortez"
+              },
+              "employees": [
+                {
+                  "@type": "Person",
+                  "name": "Moohea Chan",
+                  "jobTitle": "Tattoo Artist",
+                  "description": "Ornemental - Graphic - Manga - Dotwork",
+                  "image": "https://entraks-tattoo-shop.vercel.app/img/moohea.jpg",
+                  "url": "https://www.instagram.com/moohea_chan.ink"
+                }
+              ],
+              "potentialAction": {
+                "@type": "ReserveAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://entraks-tattoo-shop.vercel.app/#contact",
+                  "inLanguage": "fr"
+                },
+                "result": {
+                  "@type": "Reservation",
+                  "name": "Contact Tattoo Shop"
+                }
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 47.2685782,
+                "longitude": -2.3440064
+              }
+            }
+            </script>
+            
     </footer>
 </body>
 </html>
+
+
+
