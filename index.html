@@ -5,8 +5,9 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Entrak's Tattoo Shop, salon de tatouage à Pornichet. Découvrez nos artistes et leurs projets.">
-    <meta name="keywords" content="tatouage, salon de tatouage, Tattoo, Pornichet, La Baule">
+    <meta name="description" content="Entrak's Tattoo Shop, salon de tatouage installer à Pornichet proche de Nantes et St Nazaire. Découvrez nos artistes et leurs projets.">
+    <meta name="keywords" content="tatouage, salon de tatouage, Tattoo, Pornichet, La Baule, Loire Atlantique, Bretagne, black work">
+    <meta name="author" content="Entrak's Tattoo Shop">
     <title>Entrak's Tatoo Shop, salon de tatouage à Pornichet</title>
     <link rel="stylesheet" href="../css/style.css">
     <script type="text/javascript" src="../js/script.js" defer></script>
@@ -16,7 +17,7 @@
 <body id="top">
     <nav>
         <div class="nom_logo">
-            <h4>Entrak's Tattoo Shop</h4>
+            <h1>Entrak's Tattoo Shop</h1>
         </div>
         <div class="nav_right">
             <div class="element_nav">
@@ -48,7 +49,7 @@
                     <div class="art">
                         
                         <a href="https://www.instagram.com/vlad.cortez" target="_blank">
-                            <img src="img/vlad.jpg">
+                            <img src="img/vlad.jpg" alt="logo du tatoueur vlad cortez, un V dans un C entourer d'un ornemental dark">
                         </a>
                         <div class="art-content">
                             <h2 class="art-title">Vlad Cortez</h2>
@@ -60,7 +61,7 @@
                     <div class="art">
                         
                         <a href="https://www.instagram.com/moohea_chan.ink" target="_blank">
-                            <img src="img/moohea.jpg">
+                            <img src="img/moohea.jpg" alt="logo de la tatoueuse Moohea chan, ornemental sur fond noir">
                         </a>
                         
                         <div class="art-content">
@@ -83,7 +84,7 @@
                     <div class="art">
                         
                         <a href="https://www.instagram.com/ambre_tattooer" target="_blank">
-                            <img src="img/ambre.jpg">
+                            <img src="img/ambre.jpg" alt="image de la tatoueuse ambre tatooer">
                         </a>
                         <div class="art-content">
                             <h2 class="art-title">Ambre Tattooer</h2>
@@ -156,6 +157,90 @@
                 <li>02 40 42 30 88</li>  
                 <a class=insta href="https://www.instagram.com/entraks.tattoo.shop" target="_blank"><img src="img/insta.png" alt="instagram"></a>
             </ul>
+
+            <form id="tattooForm" action="https://api.web3forms.com/submit" method="POST">
+
+                <!-- Replace with your Access Key -->
+                <input type="hidden" name="access_key" value="d5dc6d6a-e42b-49c5-9234-459a0681a2b8">
+
+                <input type="hidden" name="subject" value="Demande de contact">
+                
+                <!-- Form Inputs. Each input must have a name="" attribute -->
+                <ul>
+                    <h2>Une idée ? Contactez-nous !</h2>
+                    <il>
+                        <!-- <label for="prenom">Prénom</label> -->
+                        <input type="text" name="Prenom" placeholder="Prenom*"required>
+                    
+                        <!-- <label for="prenom">Nom</label> -->
+                        <input type="text" name="Nom" placeholder="Nom*"required>
+                    </il>   
+                    <il>
+                        <!-- <label for="mail">E-mail</label> -->
+                        <input type="email" name="email" placeholder="Email*"required>
+                    </il>  
+                    <il>  
+                        <!-- <label for="tel">Téléphone</label> -->
+                        <input type="tel" name="telephone" placeholder="Numéro de téléphone*" required>
+                    </il>
+                    <il>    
+                        <!-- <label for="msg">Idée du tattoo</label> -->
+                        <textarea name="idée du tattoo" placeholder="Idée du tattoo*" required></textarea>
+                    </il> 
+                    <il>   
+                        <!-- <label for="taille">Taille approximative du tattoo</label> -->
+                        <input type="text" name="Taille approximative du tattoo" placeholder="Taille approximative du tattoo">
+                    </il>
+                    <il>    
+                        <!-- <label for="emplacement">Emplacement du tattoo</label> -->
+                        <input type="text" name="Emplacement du tattoo" placeholder="Emplacement du tattoo">
+                    </il>    
+                   
+                </ul>    
+
+                <div class=h-captcha data-captcha=true></div>
+
+               
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            
+                
+                <input type="hidden" name="redirect" value="https://entraks-tattoo-shop.vercel.app/"> 
+               
+
+
+
+                    <script>
+                        const form = document.getElementById('tattooForm');
+                        const submitButton = document.getElementById('bouti');
+                    
+                        form.addEventListener('submit', function(e) {
+                            const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+                    
+                            if (!hCaptcha) {
+                                e.preventDefault(); 
+                                alert("Veuillez remplir le captcha");
+                                return;
+                            }
+                    
+                         
+                            const confirmation = confirm("Êtes-vous sûr de vouloir envoyer le formulaire ?");
+                            if (!confirmation) {
+                                e.preventDefault(); 
+                            }
+                        });
+                    </script>
+
+
+
+            
+                <button id="bouti" class=bout type="submit">Envoyer</button>
+            
+            </form>
+
+           
+
+            <script src="https://web3forms.com/client/script.js" async defer></script>
+
             <iframe class="carte" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.928200920005!2d-2.3440063858889073!3d47.268578278993665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805433a85699ccb%3A0xa0134148ee5bc775!2sEntrak&#39;s%20Tattoo%20shop!5e0!3m2!1sfr!2sfr!4v1716368451069!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
 
@@ -166,7 +251,10 @@
     </main>
 
     <footer>
-        <p>© Entrak's Tattoo Shop | 2024 <br>Create by ec-craft.fr</p>
+        <p>© Entrak's Tattoo Shop | 2024</p>
     </footer>
 </body>
 </html>
+
+
+

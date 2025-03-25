@@ -25,7 +25,7 @@ h2 {
     text-align: center;
     font-family: 'almendra', serif;
 }
-h4 {
+h1 {
     font-size: 40px;
     margin: 20px;
     text-align: center;
@@ -444,10 +444,13 @@ img {
     text-align: center;
     font-size: 20px;
     font-family: 'reddit mono', monospace;
+    margin-top: 55px;
+    margin-bottom: 55px;
 }
 
 .carte{
-    margin-top: 30px;
+    margin-top: 55px;
+    border-radius: 5px;
 
 }
 
@@ -491,6 +494,100 @@ img {
     width: 70px; /* Réduire la largeur de l'image à 50% */
     height: auto; /* Garder le ratio d'aspect de l'image */
 }
+
+/* Style pour le formulaire */
+#tattooForm {
+    background-color: #ffffff; 
+    color: #000000; /* Texte blanc pour le contraste */
+    font-family: 'almendra', serif; /* Police utilisée sur le site */
+    padding: 70px;
+    padding-top: 25px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(83, 82, 82, 0.5);
+    max-width: 600px;
+    margin: 20px auto;
+    align-items: center;
+    
+}
+#tattooForm ::placeholder {
+    font-family: 'almendra', serif; /* Police utilisée sur le site */
+}
+
+#tattooForm ul {
+    list-style-type: none; /* Supprime les puces */
+    padding: 0;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+
+#tattooForm li {
+    margin-bottom: 500px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#tattooForm label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #010101; /* Une touche de couleur pour les labels */
+}
+
+#tattooForm input[type="text"],
+#tattooForm input[type="email"],
+#tattooForm input[type="tel"],
+#tattooForm textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    background-color: #ffffff; /* Fond sombre */
+    color: #040404;
+    box-shadow: 0px 4px 10px rgba(83, 82, 82, 0.5);
+    margin-top: 35px;
+}
+
+#tattooForm textarea {
+    resize: none; /* Empêche le redimensionnement par défaut */
+    height: 100px; /* Taille par défaut */
+}
+
+#tattooForm input:focus,
+#tattooForm textarea:focus {
+    outline: none;
+    border-color: #e6e4e4; /* Change la bordure au focus */
+    background-color: #ffffff; /* Fait ressortir le champ */
+}
+
+
+
+#tattooForm button.bout {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-family: 'almendra', serif;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 35px;
+}
+
+#tattooForm button.bout:hover {
+    background-color: #000000;
+    color: #ff002b;
+    transform: scale(1.05); /* Agrandissement au survol */
+}
+
+#tattooForm button.bout:active {
+    transform: scale(0.95); /* Rétrécissement au clic */
+}
+
+
 
 
 
